@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageJenkinsPage extends AbsPageObject {
 
+
     private String MANAGE_JENKINS_URL = "http://localhost:8080/manage";
 
     @FindBy(xpath = "//a[@title = 'Manage Users']")
@@ -27,6 +28,7 @@ public class ManageJenkinsPage extends AbsPageObject {
         return this;
     }
 
+    //Method for checking is required dt element is exist
     public boolean isDtExist() {
         if (this.dtElem.isDisplayed()) {
             if (this.dtElem.getText().equals("Manage Users")) {
@@ -36,6 +38,7 @@ public class ManageJenkinsPage extends AbsPageObject {
         return false;
     }
 
+    //Method for checking is required dd element is exist
     public boolean isDdExist() {
         if (this.ddElem.isDisplayed()) {
             if (this.ddElem.getText().equals("Create/delete/modify users that can log in to this Jenkins")) {

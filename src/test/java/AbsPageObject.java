@@ -1,10 +1,10 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
+// Accesor for all of pages in a test
 public abstract class AbsPageObject {
 
-    private WebDriver driver;
+    protected WebDriver driver;
     private WebDriverWait wait;
 
     public AbsPageObject(WebDriver driver) {

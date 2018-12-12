@@ -4,11 +4,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
+// Class realise authorisation with presented username and password.
 public class SignInPage extends AbsPageObject {
 
+    //usernamane and password for authorisation
     private String usernameHolder = "Naverin89";
     private String passwordHolder = "123qweasdzxc";
+
+    //Actual title for correct authorise page
     public String actualTitle;
 
     @FindBy(name = "j_username")
@@ -42,6 +45,10 @@ public class SignInPage extends AbsPageObject {
         setPassword(passwordHolder);
         signIn.click();
         return this;
+    }
+
+    public String getButton() {
+        return signIn.getCssValue("background-color");
     }
 
 }

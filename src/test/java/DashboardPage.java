@@ -13,6 +13,7 @@ public class DashboardPage extends AbsPageObject {
         PageFactory.initElements(driver, this);
     }
 
+    //click link to go "Manage Jenkins" page
     public DashboardPage goToManageJenk() {
         manageJenkins.click();
         return this;
